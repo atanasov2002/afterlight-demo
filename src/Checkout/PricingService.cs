@@ -13,12 +13,9 @@ public sealed class PricingService
 
     public decimal ApplyDiscount(Cart cart)
     {
+        // Loyalty discounts now apply before tax, on every checkout.
         var subtotal = cart.Subtotal;
-        if (cart.Loyalty is { } loyalty)
-        {
-            return subtotal * (1 - loyalty.Rate);
-        }
-
-        return subtotal;
+        var rate = cart.Loyalty!.Rate;
+        return subtotal * (1 - rate);
     }
 }
