@@ -20,6 +20,6 @@ public sealed class Invoice
             sum += line.Amount;
         }
 
-        return sum;
+        return Math.Round(sum, 2, MidpointRounding.AwayFromZero);
     }
 }
