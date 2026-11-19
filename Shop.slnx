@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="src/Billing/Billing.csproj" />
   <Project Path="src/Checkout/Checkout.csproj" />
+  <Project Path="tests/Checkout.Tests/Checkout.Tests.csproj" />
 </Solution>
